@@ -1,0 +1,21 @@
+Author - Arpit(p22io201)
+
+
+1. In app.py, a flask web server is being created. Host and port is also defined in the last line of the code.
+
+
+2. A base environment python3.8 is selected in the Dockerfile.
+   Then the working directory is selected and the content of the current directory in which we are in is     
+   copied into the working directory.
+   
+   In app.py we require flask. So in the Dockerfile, I include "RUN pip install flask"command.
+   
+   "CMD ["python", "app.py"]" - This CMD command tells what to run when container starts. In this case, app.py
+   is to be executed with python.
+   
+   
+ 3. "docker build -t flask_docker_app ." -  Run this command to create docker image.
+ 
+ 
+ 4. "docker run -p 5000:5000 flask_docker_app" - Run the application using this command.
+
